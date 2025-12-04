@@ -362,30 +362,6 @@ No circular dependencies or integration issues.
 
 ---
 
-## Testing Coverage
-
-### Unit Tests
-- Atomic counter increments
-- EWMA smoothing accuracy
-- Pressure normalization bounds
-- Budget computation correctness
-- Thread synchronization
-
-### Integration Tests
-- Storage server startup
-- Controller thread lifecycle
-- Metrics collection under load
-- Budget adjustment responsiveness
-- Data correctness (LSN, MVCC)
-
-### Scenario Tests
-- Light load (queue→budget decrease)
-- Heavy load (queue→budget increase)
-- Mixed load (smooth budget transitions)
-- Sustained workload (queue stabilization)
-
----
-
 ## Known Limitations
 
 1. **Configuration**: Requires code edit + rebuild (no GUC yet)
