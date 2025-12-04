@@ -5,15 +5,13 @@ This document provides a comprehensive list of all changes made to implement Ada
 
 
 **Total Files Changed**: 10 (2 new files, 4 modified files, 4 new documentation files)  
-**Total Lines Added**: ~2200 (700 code + 1500 documentation)  
-**Breaking Changes**: None (feature is disabled by default via flag)
+**Total Lines Added**: ~700 code +  documentation  
 
 ---
 
 ## New Files Created
 
 ### 1. `src/include/storage/adaptive_sr.h`
-**Status**: ✓ Created  
 **Lines**: 147  
 **Purpose**: Public API header for Adaptive Smart Replay  
 
@@ -31,7 +29,6 @@ This document provides a comprehensive list of all changes made to implement Ada
 ---
 
 ### 2. `src/backend/storage/adaptive_sr.c`
-**Status**: ✓ Created  
 **Lines**: 523  
 **Purpose**: Core ASR implementation  
 
@@ -71,7 +68,6 @@ verbose_metrics = false    // Quiet by default
 ## Modified Files
 
 ### 1. `src/backend/tcop/wal_redo.c`
-**Status**: ✓ Modified  
 **Lines Changed**: +20 total (1 added line + 19 modified/context)  
 
 **Changes**:
@@ -109,7 +105,6 @@ while(reader_state->EndRecPtr < lsn) {
 ---
 
 ### 2. `src/backend/tcop/storage_server.c`
-**Status**: ✓ Modified  
 **Lines Changed**: +3 total  
 
 **Changes**:
@@ -134,7 +129,6 @@ ASR_StartController();
 ---
 
 ### 3. `src/backend/storage/rpc/rpcserver.cpp`
-**Status**: ✓ Modified  
 **Lines Changed**: +2 total  
 
 **Changes**:
@@ -157,7 +151,6 @@ ASR_RecordHotMiss();
 ---
 
 ### 4. `src/backend/replication/walreceiver.c`
-**Status**: ✓ Modified  
 **Lines Changed**: +2 total  
 
 **Changes**:
@@ -181,7 +174,7 @@ ASR_RecordWalIngest(segbytes);  // Record WAL bytes received
 
 ## Documentation Files Created
 
-### 1. `docs/adaptive_smart_replay.md`
+### 1. `src/openaurora/docs/adaptive_smart_replay.md`
 **Lines**: ~450  
 **Purpose**: Comprehensive architecture and design document  
 
@@ -201,7 +194,7 @@ ASR_RecordWalIngest(segbytes);  // Record WAL bytes received
 
 ---
 
-### 2. `docs/ASR_IMPLEMENTATION_SUMMARY.md`
+### 2. `src/openaurora/docs/ASR_IMPLEMENTATION_SUMMARY.md`
 **Lines**: ~500  
 **Purpose**: Executive summary of implementation  
 
@@ -221,7 +214,7 @@ ASR_RecordWalIngest(segbytes);  // Record WAL bytes received
 
 ---
 
-### 3. `docs/asr_integration_reference.c`
+### 3. `src/openaurora/docs/asr_integration_reference.c`
 **Lines**: ~550  
 **Purpose**: Code-level integration reference  
 
@@ -237,7 +230,7 @@ ASR_RecordWalIngest(segbytes);  // Record WAL bytes received
 
 ---
 
-### 4. `docs/asr_setup_guide.sh`
+### 4. `src/openaurora/docs/asr_setup_guide.sh`
 **Lines**: ~220  
 **Purpose**: Step-by-step setup and testing guide  
 
@@ -256,7 +249,7 @@ ASR_RecordWalIngest(segbytes);  // Record WAL bytes received
 
 ---
 
-### 5. `docs/asr_quickstart.sh`
+### 5. `src/openaurora/docs/asr_quickstart.sh`
 **Lines**: ~280  
 **Purpose**: Interactive quickstart guide  
 
